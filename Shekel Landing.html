@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Shekel — The Marketplace for AI Agents</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ─────────────────────────── HEADER ─────────────────────────── -->
+  <header class="site-header" data-screen-label="00 Header">
+    <div class="header-inner">
+      <a href="#" class="brand" aria-label="Shekel home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/shekel-mark.png" alt="" />
+        </span>
+        <span class="brand-word">Shekel</span>
+      </a>
+      <nav class="primary-nav">
+        <a href="#marketplace" class="nav-link is-active">Marketplace</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#workflows" class="nav-link">Workflows</a>
+        <a href="#developers" class="nav-link">For Developers</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="Toggle theme">
+          <i class="bi bi-sun-fill icon-light"></i>
+          <i class="bi bi-moon-stars-fill icon-dark"></i>
+        </button>
+        <a href="#" class="btn btn-ghost">Sign in</a>
+        <a href="#" class="btn btn-primary">Get started <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ─────────────────────────── HERO ─────────────────────────── -->
+    <section class="hero" data-screen-label="01 Hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          <span>Live marketplace · 2,418 agents available</span>
+        </div>
+
+        <h1 class="hero-title">
+          The App Store<br />
+          for <span class="grad-text">AI Agents</span>.
+        </h1>
+
+        <p class="hero-sub">
+          Discover, run, and chain specialized AI agents built by independent teams.
+          Pay per task, subscribe, or integrate by API — without rebuilding from scratch.
+        </p>
+
+        <form class="hero-search" onsubmit="event.preventDefault();">
+          <i class="bi bi-search hero-search-icon"></i>
+          <input type="text" class="hero-search-input" placeholder="Try ‘review a contract’, ‘write product descriptions’, ‘design a floor plan’…" />
+          <div class="hero-search-tags" aria-hidden="true">
+            <span>⌘K</span>
+          </div>
+          <button type="submit" class="btn btn-primary hero-search-btn">Search agents</button>
+        </form>
+
+        <div class="hero-chips">
+          <span class="chip-label">Trending:</span>
+          <button class="chip is-active" data-cat="all">All</button>
+          <button class="chip" data-cat="content">Content</button>
+          <button class="chip" data-cat="legal">Legal</button>
+          <button class="chip" data-cat="ecommerce">E-Commerce</button>
+          <button class="chip" data-cat="design">Design</button>
+          <button class="chip" data-cat="support">Support</button>
+          <button class="chip" data-cat="data">Data</button>
+          <button class="chip" data-cat="dev">Developer</button>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>2,418</strong><span>Agents</span></div>
+          <div><strong>74</strong><span>Categories</span></div>
+          <div><strong>1.2M</strong><span>Runs this week</span></div>
+          <div><strong>4.8<i class="bi bi-star-fill"></i></strong><span>Average rating</span></div>
+        </div>
+      </div>
+
+      <!-- Floating preview cards next to hero on wide screens -->
+      <div class="hero-preview" aria-hidden="true">
+        <div class="preview-card preview-run">
+          <div class="preview-run-head">
+            <span class="preview-avatar grad-blue">L</span>
+            <div>
+              <div class="preview-name">LexAI · Contract review</div>
+              <div class="preview-sub">Running · 4.2s elapsed</div>
+            </div>
+            <span class="preview-tag tag-green"><span class="tag-dot"></span>Live</span>
+          </div>
+          <div class="preview-stream">
+            <div class="line"><span class="muted">✓</span>&nbsp;Parsed 14 pages · 38 clauses detected</div>
+            <div class="line"><span class="muted">✓</span>&nbsp;Identified 3 risky clauses (auto-renewal, liability cap)</div>
+            <div class="line"><span class="muted">●</span>&nbsp;Drafting plain-English summary…<span class="cursor"></span></div>
+          </div>
+          <div class="preview-foot">
+            <span>Risk score</span>
+            <div class="risk-bar"><span style="width: 62%"></span></div>
+            <strong>62 / 100</strong>
+          </div>
+        </div>
+
+        <div class="preview-card preview-mini preview-mini-1">
+          <span class="preview-avatar grad-cyan">S</span>
+          <div>
+            <div class="preview-name">SocialCraft AI</div>
+            <div class="preview-sub">Generated 12 posts · 2s</div>
+          </div>
+          <i class="bi bi-arrow-up-right"></i>
+        </div>
+
+        <div class="preview-card preview-mini preview-mini-2">
+          <span class="preview-avatar grad-violet">A</span>
+          <div>
+            <div class="preview-name">ArchitectAI</div>
+            <div class="preview-sub">Rendering floor plan…</div>
+          </div>
+          <span class="preview-pct">68%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── TRUST STRIP ───────────────── -->
+    <section class="trust-strip" aria-label="Trust signals">
+      <div class="container trust-row">
+        <div class="trust-item">
+          <i class="bi bi-patch-check-fill"></i>
+          <div><strong>Verified publishers</strong><span>KYC + identity checks on every team</span></div>
+        </div>
+        <div class="trust-item">
+          <i class="bi bi-shield-lock-fill"></i>
+          <div><strong>Sandboxed runs</strong><span>SOC 2 Type II · data never trains the model</span></div>
+        </div>
+        <div class="trust-item">
+          <i class="bi bi-lightning-charge-fill"></i>
+          <div><strong>SLA-backed uptime</strong><span>99.95% across hosted agents</span></div>
+        </div>
+        <div class="trust-item">
+          <i class="bi bi-stars"></i>
+          <div><strong>Reviewed by humans</strong><span>Every listing manually evaluated</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── FEATURED AGENTS ─────────────── -->
+    <section class="featured" id="marketplace" data-screen-label="02 Featured agents">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow"><i class="bi bi-stars"></i> Featured this week</span>
+            <h2 class="section-title">Agents your team can put to work today</h2>
+          </div>
+          <a href="#" class="section-link">Browse all 2,418 agents <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="agents-grid">
+          <!-- Card 1 — large feature -->
+          <article class="agent-card agent-card-feature" data-category="content">
+            <div class="agent-card-head">
+              <div class="agent-id">
+                <span class="agent-avatar grad-cyan">S</span>
+                <div>
+                  <h3 class="agent-name">SocialCraft AI <i class="bi bi-patch-check-fill verified"></i></h3>
+                  <div class="agent-meta">
+                    <span class="agent-cat">Content</span>
+                    <span>by Loomwork Labs</span>
+                  </div>
+                </div>
+              </div>
+              <button class="icon-btn" aria-label="Save"><i class="bi bi-bookmark"></i></button>
+            </div>
+
+            <p class="agent-desc">
+              Generates platform-specific posts for Instagram, X, LinkedIn and TikTok
+              from a brief or URL — with tone matching, hashtag selection and a built-in
+              calendar.
+            </p>
+
+            <div class="agent-demo">
+              <div class="demo-input">
+                <i class="bi bi-link-45deg"></i>
+                <span>shekel.ai/post/launch-day-recap</span>
+              </div>
+              <div class="demo-arrow"><i class="bi bi-arrow-down"></i></div>
+              <div class="demo-outputs">
+                <span class="demo-pill"><i class="bi bi-instagram"></i> Instagram · 4</span>
+                <span class="demo-pill"><i class="bi bi-twitter-x"></i> X · 6</span>
+                <span class="demo-pill"><i class="bi bi-linkedin"></i> LinkedIn · 2</span>
+                <span class="demo-pill"><i class="bi bi-tiktok"></i> TikTok · 1</span>
+              </div>
+            </div>
+
+            <div class="agent-foot">
+              <div class="agent-stats">
+                <span><i class="bi bi-star-fill"></i> 4.9 <small>(2,184)</small></span>
+                <span><i class="bi bi-lightning-charge-fill"></i> 184K runs</span>
+                <span><i class="bi bi-clock"></i> ~3s avg</span>
+              </div>
+              <div class="agent-price">
+                <strong>$0.05</strong><span>/post</span>
+              </div>
+              <div class="agent-cta">
+                <a href="#" class="btn btn-outline">Try demo</a>
+                <a href="#" class="btn btn-primary">View agent</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 — ArchitectAI -->
+          <article class="agent-card" data-category="design">
+            <div class="agent-card-head">
+              <div class="agent-id">
+                <span class="agent-avatar grad-violet">A</span>
+                <div>
+                  <h3 class="agent-name">ArchitectAI <i class="bi bi-patch-check-fill verified"></i></h3>
+                  <div class="agent-meta">
+                    <span class="agent-cat">Design · Real Estate</span>
+                    <span>by Nordhaus Studio</span>
+                  </div>
+                </div>
+              </div>
+              <button class="icon-btn" aria-label="Save"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <p class="agent-desc">
+              Generates 3D floor plans and architectural renderings from natural-language descriptions. Iterate on rooms, materials and light in seconds.
+            </p>
+            <div class="agent-visual visual-floorplan" aria-hidden="true">
+              <svg viewBox="0 0 320 120" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="fpg" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="var(--c-blue)" stop-opacity=".22"/>
+                    <stop offset="1" stop-color="var(--c-cyan)" stop-opacity=".06"/>
+                  </linearGradient>
+                </defs>
+                <rect x="8" y="8" width="304" height="104" rx="6" fill="url(#fpg)" stroke="var(--c-blue)" stroke-opacity=".6" />
+                <line x1="120" y1="8" x2="120" y2="68" stroke="var(--c-blue)" stroke-opacity=".55"/>
+                <line x1="8" y1="68" x2="220" y2="68" stroke="var(--c-blue)" stroke-opacity=".55"/>
+                <line x1="220" y1="8" x2="220" y2="112" stroke="var(--c-blue)" stroke-opacity=".55"/>
+                <circle cx="62" cy="36" r="2.5" fill="var(--c-cyan)"/>
+                <circle cx="170" cy="36" r="2.5" fill="var(--c-cyan)"/>
+                <circle cx="270" cy="60" r="2.5" fill="var(--c-cyan)"/>
+                <text x="20" y="28" font-size="9" fill="var(--c-ink-soft)" font-family="JetBrains Mono">LIVING · 24m²</text>
+                <text x="132" y="28" font-size="9" fill="var(--c-ink-soft)" font-family="JetBrains Mono">KITCHEN · 11m²</text>
+                <text x="232" y="28" font-size="9" fill="var(--c-ink-soft)" font-family="JetBrains Mono">BED · 16m²</text>
+                <text x="20" y="92" font-size="9" fill="var(--c-ink-soft)" font-family="JetBrains Mono">HALL</text>
+                <text x="132" y="92" font-size="9" fill="var(--c-ink-soft)" font-family="JetBrains Mono">BATH</text>
+              </svg>
+            </div>
+            <div class="agent-foot">
+              <div class="agent-stats">
+                <span><i class="bi bi-star-fill"></i> 4.8 <small>(612)</small></span>
+                <span><i class="bi bi-lightning-charge-fill"></i> 41K</span>
+              </div>
+              <div class="agent-price"><strong>$2.50</strong><span>/plan</span></div>
+              <div class="agent-cta">
+                <a href="#" class="btn btn-outline">Try demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 — LexAI -->
+          <article class="agent-card" data-category="legal">
+            <div class="agent-card-head">
+              <div class="agent-id">
+                <span class="agent-avatar grad-blue">L</span>
+                <div>
+                  <h3 class="agent-name">LexAI <i class="bi bi-patch-check-fill verified"></i></h3>
+                  <div class="agent-meta">
+                    <span class="agent-cat">Legal</span>
+                    <span>by Beacon Law</span>
+                  </div>
+                </div>
+              </div>
+              <button class="icon-btn" aria-label="Save"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <p class="agent-desc">
+              Reviews contracts, flags risky clauses, and returns a plain-English summary with a quantified risk score and suggested edits.
+            </p>
+            <div class="agent-visual visual-lex" aria-hidden="true">
+              <div class="clause-row clause-ok"><span>Term & termination</span><i class="bi bi-check-circle-fill"></i></div>
+              <div class="clause-row clause-warn"><span>Auto-renewal · 36 months</span><i class="bi bi-exclamation-triangle-fill"></i></div>
+              <div class="clause-row clause-warn"><span>Liability cap below industry norm</span><i class="bi bi-exclamation-triangle-fill"></i></div>
+              <div class="risk-line"><span>Risk score</span><div class="risk-bar"><span style="width:62%"></span></div><strong>62</strong></div>
+            </div>
+            <div class="agent-foot">
+              <div class="agent-stats">
+                <span><i class="bi bi-star-fill"></i> 4.9 <small>(1,047)</small></span>
+                <span><i class="bi bi-lightning-charge-fill"></i> 92K</span>
+              </div>
+              <div class="agent-price"><strong>$1.00</strong><span>/contract</span></div>
+              <div class="agent-cta">
+                <a href="#" class="btn btn-outline">Try demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 — ShopScribe -->
+          <article class="agent-card" data-category="ecommerce">
+            <div class="agent-card-head">
+              <div class="agent-id">
+                <span class="agent-avatar grad-sun">$</span>
+                <div>
+                  <h3 class="agent-name">ShopScribe <i class="bi bi-patch-check-fill verified"></i></h3>
+                  <div class="agent-meta">
+                    <span class="agent-cat">E-Commerce</span>
+                    <span>by Larkfield</span>
+                  </div>
+                </div>
+              </div>
+              <button class="icon-btn" aria-label="Save"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <p class="agent-desc">
+              SEO-optimised product descriptions in bulk for Amazon, Shopify and WooCommerce. CSV in, channel-ready copy out.
+            </p>
+            <div class="agent-visual visual-shop" aria-hidden="true">
+              <div class="shop-row"><span class="shop-id">SKU-08214</span><span class="shop-name">Linen sleep set, sage</span><span class="shop-bar"><span style="width:92%"></span></span><span class="shop-pct">92</span></div>
+              <div class="shop-row"><span class="shop-id">SKU-08221</span><span class="shop-name">Walnut bedside table</span><span class="shop-bar"><span style="width:88%"></span></span><span class="shop-pct">88</span></div>
+              <div class="shop-row"><span class="shop-id">SKU-08230</span><span class="shop-name">Ribbed cotton bath towel</span><span class="shop-bar"><span style="width:95%"></span></span><span class="shop-pct">95</span></div>
+            </div>
+            <div class="agent-foot">
+              <div class="agent-stats">
+                <span><i class="bi bi-star-fill"></i> 4.7 <small>(3,810)</small></span>
+                <span><i class="bi bi-lightning-charge-fill"></i> 2.4M</span>
+              </div>
+              <div class="agent-price"><strong>$0.03</strong><span>/description</span></div>
+              <div class="agent-cta">
+                <a href="#" class="btn btn-outline">Try demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 — SupportBot Pro -->
+          <article class="agent-card agent-card-wide" data-category="support">
+            <div class="agent-card-head">
+              <div class="agent-id">
+                <span class="agent-avatar grad-mint">S</span>
+                <div>
+                  <h3 class="agent-name">SupportBot Pro <i class="bi bi-patch-check-fill verified"></i></h3>
+                  <div class="agent-meta">
+                    <span class="agent-cat">Customer Support</span>
+                    <span>by Helix Service</span>
+                    <span class="badge-enterprise">Enterprise ready</span>
+                  </div>
+                </div>
+              </div>
+              <button class="icon-btn" aria-label="Save"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <p class="agent-desc">
+              Handles tier-1 FAQs, drafts replies for your agents, and plugs straight into Zendesk, Intercom and Freshdesk. Routes the hard tickets to humans.
+            </p>
+            <div class="agent-support-visual" aria-hidden="true">
+              <div class="support-stat">
+                <span>Median first response</span>
+                <strong>11<small>s</small></strong>
+              </div>
+              <div class="support-stat">
+                <span>Auto-resolved</span>
+                <strong>68<small>%</small></strong>
+              </div>
+              <div class="support-stat">
+                <span>CSAT lift</span>
+                <strong>+9<small>pt</small></strong>
+              </div>
+              <div class="support-integrations">
+                <span>Integrates with</span>
+                <div class="integration-chips">
+                  <span class="ichip">Zendesk</span>
+                  <span class="ichip">Intercom</span>
+                  <span class="ichip">Freshdesk</span>
+                  <span class="ichip">Slack</span>
+                  <span class="ichip">Hubspot</span>
+                </div>
+              </div>
+            </div>
+            <div class="agent-foot">
+              <div class="agent-stats">
+                <span><i class="bi bi-star-fill"></i> 4.9 <small>(902)</small></span>
+                <span><i class="bi bi-lightning-charge-fill"></i> 312K resolved</span>
+                <span><i class="bi bi-clock"></i> 99.97% uptime</span>
+              </div>
+              <div class="agent-price"><strong>$49</strong><span>/month per inbox</span></div>
+              <div class="agent-cta">
+                <a href="#" class="btn btn-outline">Talk to sales</a>
+                <a href="#" class="btn btn-primary">Subscribe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── CATEGORIES ─────────────── -->
+    <section class="categories" id="categories" data-screen-label="03 Categories">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow"><i class="bi bi-grid"></i> Browse by category</span>
+            <h2 class="section-title">74 categories. One marketplace.</h2>
+          </div>
+          <a href="#" class="section-link">All categories <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="cat-grid">
+          <a href="#" class="cat-tile" style="--cat-color: #2F80ED">
+            <div class="cat-icon"><i class="bi bi-pencil-square"></i></div>
+            <h3>Content & Marketing</h3>
+            <p>Copy, social, SEO, brand voice.</p>
+            <div class="cat-foot"><span>312 agents</span><i class="bi bi-arrow-up-right"></i></div>
+          </a>
+          <a href="#" class="cat-tile" style="--cat-color: #6f5cf5">
+            <div class="cat-icon"><i class="bi bi-house-gear"></i></div>
+            <h3>Design & Real Estate</h3>
+            <p>Renderings, floor plans, 3D scenes.</p>
+            <div class="cat-foot"><span>84 agents</span><i class="bi bi-arrow-up-right"></i></div>
+          </a>
+          <a href="#" class="cat-tile" style="--cat-color: #1f7a4a">
+            <div class="cat-icon"><i class="bi bi-shield-check"></i></div>
+            <h3>Legal & Compliance</h3>
+            <p>Contracts, policy, due diligence.</p>
+            <div class="cat-foot"><span>146 agents</span><i class="bi bi-arrow-up-right"></i></div>
+          </a>
+          <a href="#" class="cat-tile" style="--cat-color: #e07a2f">
+            <div class="cat-icon"><i class="bi bi-bag-check"></i></div>
+            <h3>E-Commerce</h3>
+            <p>Listings, pricing, merchandising.</p>
+            <div class="cat-foot"><span>208 agents</span><i class="bi bi-arrow-up-right"></i></div>
+          </a>
+          <a href="#" class="cat-tile" style="--cat-color: #19a59f">
+            <div class="cat-icon"><i class="bi bi-chat-square-dots"></i></div>
+            <h3>Customer Support</h3>
+            <p>Tier-1 automation, QA, routing.</p>
+            <div class="cat-foot"><span>167 agents</span><i class="bi bi-arrow-up-right"></i></div>
+          </a>
+          <a href="#" class="cat-tile" style="--cat-color: #56CCF2">
+            <div class="cat-icon"><i class="bi bi-bar-chart-line"></i></div>
+            <h3>Data & Analytics</h3>
+            <p>BI, classification, enrichment.</p>
+            <div class="cat-foot"><span>289 agents</span><i class="bi bi-arrow-up-right"></i></div>
+          </a>
+          <a href="#" class="cat-tile" style="--cat-color: #b04ad8">
+            <div class="cat-icon"><i class="bi bi-code-square"></i></div>
+            <h3>Developer Tools</h3>
+            <p>Code review, docs, migrations.</p>
+            <div class="cat-foot"><span>421 agents</span><i class="bi bi-arrow-up-right"></i></div>
+          </a>
+          <a href="#" class="cat-tile" style="--cat-color: #4a86c8">
+            <div class="cat-icon"><i class="bi bi-cash-coin"></i></div>
+            <h3>Finance & Ops</h3>
+            <p>Bookkeeping, forecasting, AP/AR.</p>
+            <div class="cat-foot"><span>198 agents</span><i class="bi bi-arrow-up-right"></i></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── HOW IT WORKS ─────────────── -->
+    <section class="how" data-screen-label="04 How it works">
+      <div class="container">
+        <div class="section-head section-head-center">
+          <span class="section-eyebrow"><i class="bi bi-compass"></i> How Shekel works</span>
+          <h2 class="section-title">From discovery to production in an afternoon.</h2>
+          <p class="section-sub">Find the right agent, test it on your own data, then run it pay-as-you-go or wire it into your stack with one API key.</p>
+        </div>
+
+        <div class="how-steps">
+          <article class="how-step">
+            <div class="how-num">01</div>
+            <h3>Discover</h3>
+            <p>Search 2,418 agents by category, capability or output format. Filter by price model, latency, language, compliance and reviewer rating.</p>
+            <div class="how-visual how-visual-1">
+              <div class="search-mini">
+                <i class="bi bi-search"></i>
+                <span>“summarize support tickets”</span>
+              </div>
+              <ul class="mini-results">
+                <li><span class="mini-avatar grad-mint">S</span><span class="mini-name">SupportBot Pro</span><span class="mini-rate">★ 4.9</span></li>
+                <li><span class="mini-avatar grad-blue">T</span><span class="mini-name">TicketDigest</span><span class="mini-rate">★ 4.7</span></li>
+                <li><span class="mini-avatar grad-cyan">A</span><span class="mini-name">AnswerWise</span><span class="mini-rate">★ 4.6</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="how-step">
+            <div class="how-num">02</div>
+            <h3>Try & evaluate</h3>
+            <p>Run the agent against your own sample input in a sandboxed environment. Compare two or three side-by-side before you commit a cent.</p>
+            <div class="how-visual how-visual-2">
+              <div class="compare-row">
+                <div class="compare-col">
+                  <div class="compare-head"><span class="mini-avatar grad-mint">S</span> SupportBot Pro</div>
+                  <div class="compare-meta"><span>0.8s</span><span>$0.004</span><span>92% match</span></div>
+                </div>
+                <div class="compare-col">
+                  <div class="compare-head"><span class="mini-avatar grad-blue">T</span> TicketDigest</div>
+                  <div class="compare-meta"><span>1.4s</span><span>$0.002</span><span>88% match</span></div>
+                </div>
+              </div>
+              <div class="winner">Winner · SupportBot Pro</div>
+            </div>
+          </article>
+
+          <article class="how-step">
+            <div class="how-num">03</div>
+            <h3>Run or integrate</h3>
+            <p>Use the agent from the dashboard, schedule it on a workflow, or call it directly. One API key, predictable billing, full logs.</p>
+            <div class="how-visual how-visual-3">
+              <div class="code-block">
+                <div class="code-head"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span><span class="code-file">curl</span></div>
+<pre><span class="ctok-key">POST</span> https://api.shekel.ai/v1/agents/<span class="ctok-val">supportbot-pro</span>/run
+<span class="ctok-key">Authorization</span>: Bearer sk_live_…
+
+{
+  <span class="ctok-str">"ticket_id"</span>: <span class="ctok-str">"T-48219"</span>,
+  <span class="ctok-str">"channel"</span>: <span class="ctok-str">"zendesk"</span>
+}</pre>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── WORKFLOWS / COMPOSABILITY ─────────────── -->
+    <section class="workflows" id="workflows" data-screen-label="05 Workflows">
+      <div class="container workflow-grid">
+        <div class="workflow-copy">
+          <span class="section-eyebrow"><i class="bi bi-diagram-3"></i> Chain agents into workflows</span>
+          <h2 class="section-title">Compose specialists into a system that ships.</h2>
+          <p class="section-sub">
+            Pass the output of one agent into the next. Add a human-review step, a database write, or a Slack alert.
+            Build the workflow visually, version it, run it on a schedule.
+          </p>
+          <ul class="workflow-points">
+            <li><i class="bi bi-check-circle-fill"></i> 220+ pre-built triggers (webhook, cron, email, file drop).</li>
+            <li><i class="bi bi-check-circle-fill"></i> Branch on confidence score, escalate to humans below threshold.</li>
+            <li><i class="bi bi-check-circle-fill"></i> One bill for the whole chain — usage by agent, broken down per run.</li>
+          </ul>
+          <div class="workflow-cta">
+            <a href="#" class="btn btn-primary">Open workflow builder <i class="bi bi-arrow-right"></i></a>
+            <a href="#" class="btn btn-ghost">See example workflows</a>
+          </div>
+        </div>
+
+        <div class="workflow-canvas" aria-hidden="true">
+          <div class="wf-node wf-node-trigger" style="left:6%; top:14%">
+            <div class="wf-node-head"><i class="bi bi-lightning-charge-fill"></i> Trigger</div>
+            <div class="wf-node-name">New product in Shopify</div>
+          </div>
+          <div class="wf-node wf-node-agent" style="left:38%; top:5%">
+            <div class="wf-node-head"><span class="mini-avatar grad-sun">$</span> Agent</div>
+            <div class="wf-node-name">ShopScribe · Generate description</div>
+            <div class="wf-node-tag">avg 1.4s · $0.03</div>
+          </div>
+          <div class="wf-node wf-node-agent" style="left:38%; top:48%">
+            <div class="wf-node-head"><span class="mini-avatar grad-cyan">S</span> Agent</div>
+            <div class="wf-node-name">SocialCraft · Launch post</div>
+            <div class="wf-node-tag">avg 2.8s · $0.05</div>
+          </div>
+          <div class="wf-node wf-node-human" style="left:72%; top:30%">
+            <div class="wf-node-head"><i class="bi bi-person-check-fill"></i> Human</div>
+            <div class="wf-node-name">Review &amp; publish</div>
+          </div>
+          <svg class="wf-wires" viewBox="0 0 700 400" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M 130 95 C 200 95, 220 60, 290 60" />
+            <path d="M 130 105 C 200 105, 220 235, 290 235" />
+            <path d="M 490 60 C 540 60, 540 165, 560 175" />
+            <path d="M 490 235 C 540 235, 540 195, 560 195" />
+          </svg>
+          <div class="wf-runs">
+            <div class="wf-run-dot wf-run-1"></div>
+            <div class="wf-run-dot wf-run-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── DEVELOPERS ─────────────── -->
+    <section class="developers" id="developers" data-screen-label="06 For developers">
+      <div class="container dev-grid">
+        <div class="dev-side">
+          <span class="section-eyebrow"><i class="bi bi-braces"></i> Built an agent? Make it earn.</span>
+          <h2 class="section-title">Publish once.<br/>Reach 84,000 buyers.</h2>
+          <p class="section-sub">Wrap your model or pipeline with our SDK, set your price, and ship to the marketplace.
+            We handle hosting, billing, KYC, reviews and the long-tail of integrations so you can build the next one.</p>
+
+          <ul class="dev-points">
+            <li><strong>85%</strong> of every run goes to the publisher.</li>
+            <li>Per-task, subscription, freemium or enterprise pricing — your call.</li>
+            <li>Real-time analytics, A/B versions, region-level rollouts.</li>
+            <li>SDKs in Python, TypeScript, Go and Rust.</li>
+          </ul>
+
+          <div class="dev-cta">
+            <a href="#" class="btn btn-primary">Read the docs</a>
+            <a href="#" class="btn btn-outline">Submit an agent</a>
+          </div>
+        </div>
+
+        <div class="dev-panel">
+          <div class="dev-panel-head">
+            <div class="dev-tabs">
+              <span class="dev-tab is-active">Overview</span>
+              <span class="dev-tab">Revenue</span>
+              <span class="dev-tab">Versions</span>
+              <span class="dev-tab">Logs</span>
+            </div>
+            <span class="dev-panel-tag">Last 30 days</span>
+          </div>
+
+          <div class="dev-stats-row">
+            <div class="dev-stat">
+              <span class="stat-label">Revenue</span>
+              <strong class="stat-value">$24,812<small> +18%</small></strong>
+            </div>
+            <div class="dev-stat">
+              <span class="stat-label">Runs</span>
+              <strong class="stat-value">498,210<small> +21%</small></strong>
+            </div>
+            <div class="dev-stat">
+              <span class="stat-label">Avg rating</span>
+              <strong class="stat-value">4.86<small> · 1,204 reviews</small></strong>
+            </div>
+            <div class="dev-stat">
+              <span class="stat-label">Active subs</span>
+              <strong class="stat-value">3,481<small> +12%</small></strong>
+            </div>
+          </div>
+
+          <div class="dev-chart" aria-hidden="true">
+            <svg viewBox="0 0 600 160" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="var(--c-blue)" stop-opacity=".34"/>
+                  <stop offset="1" stop-color="var(--c-blue)" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0 124 L40 118 L80 110 L120 116 L160 96 L200 88 L240 92 L280 70 L320 62 L360 78 L400 56 L440 44 L480 50 L520 30 L560 24 L600 14 L600 160 L0 160 Z" fill="url(#chart-fill)"/>
+              <path d="M0 124 L40 118 L80 110 L120 116 L160 96 L200 88 L240 92 L280 70 L320 62 L360 78 L400 56 L440 44 L480 50 L520 30 L560 24 L600 14" stroke="var(--c-blue)" stroke-width="2" fill="none"/>
+              <line x1="0" y1="40" x2="600" y2="40" stroke="var(--c-rule)" stroke-dasharray="2 4"/>
+              <line x1="0" y1="80" x2="600" y2="80" stroke="var(--c-rule)" stroke-dasharray="2 4"/>
+              <line x1="0" y1="120" x2="600" y2="120" stroke="var(--c-rule)" stroke-dasharray="2 4"/>
+            </svg>
+            <div class="dev-chart-foot">
+              <span>Apr 17</span><span>Apr 24</span><span>May 1</span><span>May 8</span><span>May 15</span>
+            </div>
+          </div>
+
+          <div class="dev-table">
+            <div class="dev-row dev-row-head">
+              <span>Version</span><span>Released</span><span>Runs</span><span>Rating</span><span>Status</span>
+            </div>
+            <div class="dev-row">
+              <span><strong>v2.4.0</strong></span><span>May 12</span><span>184,210</span><span>4.91</span><span class="status status-live"><span class="status-dot"></span>Live · 100%</span>
+            </div>
+            <div class="dev-row">
+              <span><strong>v2.3.2</strong></span><span>Apr 28</span><span>208,600</span><span>4.84</span><span class="status status-deprecated"><span class="status-dot"></span>Deprecating</span>
+            </div>
+            <div class="dev-row">
+              <span><strong>v2.5.0-beta</strong></span><span>May 14</span><span>1,840</span><span>4.95</span><span class="status status-beta"><span class="status-dot"></span>Beta · 5%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── REVIEWS / SOCIAL PROOF ─────────────── -->
+    <section class="reviews" data-screen-label="07 Reviews">
+      <div class="container">
+        <div class="section-head section-head-center">
+          <span class="section-eyebrow"><i class="bi bi-chat-quote"></i> What teams say</span>
+          <h2 class="section-title">Trusted by teams who hate brittle pipelines.</h2>
+        </div>
+        <div class="reviews-grid">
+          <article class="review">
+            <div class="review-stars">★★★★★</div>
+            <p>“We replaced three internal scripts and a contractor with one Shekel workflow. Wrote the equivalent of 4 months of product copy in 2 hours.”</p>
+            <div class="review-byline">
+              <span class="review-avatar grad-blue">M</span>
+              <div>
+                <strong>Maya Okonkwo</strong>
+                <span>Head of Ops · Larkfield</span>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review-stars">★★★★★</div>
+            <p>“LexAI catches the same things our outside counsel does — for orders of magnitude less. We use it as a first-pass on every NDA now.”</p>
+            <div class="review-byline">
+              <span class="review-avatar grad-violet">D</span>
+              <div>
+                <strong>Daniel Reisner</strong>
+                <span>GC · Northwind Capital</span>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review-stars">★★★★★</div>
+            <p>“Publishing on Shekel meant we could focus on the model. The first month covered our compute bill four times over.”</p>
+            <div class="review-byline">
+              <span class="review-avatar grad-mint">J</span>
+              <div>
+                <strong>Júlia Marçal</strong>
+                <span>Founder · Nordhaus Studio</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── BIG CTA ─────────────── -->
+    <section class="cta-band" id="pricing" data-screen-label="08 CTA">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <span class="section-eyebrow on-dark"><i class="bi bi-rocket-takeoff"></i> Ready when you are</span>
+          <h2>Start running agents today.<br/>Pay only for what works.</h2>
+          <p>Free to browse and try. $20 of run credit when you sign up. No card required.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-light">Get started free <i class="bi bi-arrow-right"></i></a>
+          <a href="#" class="btn btn-outline-light">Publish an agent</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─────────────── FOOTER ─────────────── -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <a href="#" class="brand" aria-label="Shekel home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/shekel-mark.png" alt="" />
+          </span>
+          <span class="brand-word">Shekel</span>
+        </a>
+        <p>The decentralized marketplace for specialized AI agents.</p>
+        <div class="foot-socials">
+          <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="#" aria-label="Discord"><i class="bi bi-discord"></i></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Marketplace</h4>
+        <a href="#">Browse agents</a>
+        <a href="#">Categories</a>
+        <a href="#">Featured</a>
+        <a href="#">New &amp; trending</a>
+      </div>
+      <div class="foot-col">
+        <h4>For developers</h4>
+        <a href="#">Documentation</a>
+        <a href="#">API reference</a>
+        <a href="#">SDKs</a>
+        <a href="#">Publish an agent</a>
+        <a href="#">Pricing &amp; payouts</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Trust</h4>
+        <a href="#">Security</a>
+        <a href="#">Compliance · SOC 2</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+    <div class="container foot-base">
+      <span>© 2026 Shekel Labs · Built for builders.</span>
+      <span class="foot-base-status"><span class="status-dot"></span>All systems normal · 12.4K TPS</span>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const root = document.documentElement;
+    const stored = localStorage.getItem('shekel-theme');
+    if (stored) root.setAttribute('data-theme', stored);
+    document.querySelector('.theme-toggle').addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('shekel-theme', next);
+    });
+
+    // Category chip filter (cosmetic — just toggles active state + dims non-matching cards)
+    const chips = document.querySelectorAll('.hero-chips .chip');
+    const cards = document.querySelectorAll('.agent-card');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+        const cat = chip.dataset.cat;
+        cards.forEach(card => {
+          if (cat === 'all' || card.dataset.category === cat) {
+            card.classList.remove('is-dim');
+          } else {
+            card.classList.add('is-dim');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
